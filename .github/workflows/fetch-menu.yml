@@ -11,7 +11,7 @@ jobs:
       - name: Fetch menu step
         id: fetchMenu
         uses: ollitoivanen/OpiskelijalounasWebFetchAction@v0.4
-      - name: Get the output menu
+      - name: Get the output menu.
         run: |
           curl \
             -X PATCH \
