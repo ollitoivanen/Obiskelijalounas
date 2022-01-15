@@ -12,4 +12,4 @@ jobs:
         id: fetchMenu
         uses: ollitoivanen/OpiskelijalounasWebFetchAction@v0.4
       - name: Get the output menu
-        run: echo "Valmis menu ${{ steps.fetchMenu.outputs.menu }}"
+        run: echo "Valmis menu" #${{ steps.fetchMenu.outputs.menu }}"
