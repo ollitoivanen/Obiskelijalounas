@@ -11,5 +11,12 @@ jobs:
       - name: Fetch menu step
         id: fetchMenu
         uses: ollitoivanen/OpiskelijalounasWebFetchAction@v0.4
-      - name: Get the output menu
-        run: echo "Valmis menu" #${{ steps.fetchMenu.outputs.menu }}"
+      - name: Get the output menu'
+        run: |
+          curl --request PATCH \
+          --url https://api.github.com/gists/ff230a705bc30ecf48ead3042c767143 \
+          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+          --data '{
+              "files":"fetch-menu.yml",
+              "description": "${{ steps.fetchMenu.outputs.menu }}"
+            }' \
