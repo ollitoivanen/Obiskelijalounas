@@ -1,7 +1,7 @@
 on: 
   schedule:
       # * is a special character in YAML so you have to quote this string
-      - cron:  '* * * * *'
+      - cron:  '0 * * * *'
 
 jobs:
   fetch_menu_job:
@@ -13,4 +13,4 @@ jobs:
         uses: ollitoivanen/OpiskelijalounasWebFetchAction
       # Use the output from the `hello` step
       - name: Get the output time
-        run: echo "Valmis menu: ${{ steps.fetchMenu.outputs.menu }}"
+        run: echo "Valmis menu"
