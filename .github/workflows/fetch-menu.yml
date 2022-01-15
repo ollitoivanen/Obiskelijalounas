@@ -13,11 +13,12 @@ jobs:
         uses: ollitoivanen/OpiskelijalounasWebFetchAction@v0.4
       - name: Get the output menu
         run: |
-          curl --request PATCH \
-          --url https://api.github.com/gists/ff230a705bc30ecf48ead3042c767143 \
-          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}'
-          --header 'Accept: application/vnd.github.v3+json' \
-          --data '{
-              "files":"all_restaurants_menu.json",
-              "description": "${{ steps.fetchMenu.outputs.menu }}"
+          curl \
+            -X PATCH \
+            -H "Accept: application/vnd.github.v3+json" \
+            -H "authorization: Bearer ${{ secrets.GITHUB_TOKEN }}"\
+            https://api.github.com/gists/ff230a705bc30ecf48ead3042c767143 \
+            -d '{\
+              "files":"all_restaurants_menu.json",\
+              "description": "${{ steps.fetchMenu.outputs.menu }}"\
             }' \
