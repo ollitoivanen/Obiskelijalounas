@@ -1,7 +1,7 @@
-on: 
-  schedule:
+on: [push]
+  #schedule:
       # * is a special character in YAML so you have to quote this string
-      - cron:  '* * * * *'
+    #  - cron:  '* * * * *'
 
 jobs:
   fetch_menu_job:
@@ -11,6 +11,5 @@ jobs:
       - name: Fetch menu step
         id: fetchMenu
         uses: ollitoivanen/OpiskelijalounasWebFetchAction@v0.1
-      # Use the output from the `hello` step
-      - name: Get the output time
+      - name: Get the output menu
         run: echo "Valmis menu"
