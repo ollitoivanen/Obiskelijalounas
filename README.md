@@ -1,1 +1,0 @@
-# Opiskelijalounas Åbo nettiversio.
