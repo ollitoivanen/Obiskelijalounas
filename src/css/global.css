@@ -1,0 +1,6 @@
+html {
+  background-color: #d6ffc7;
+}
+input.middle:focus {
+  outline-width: 0;
+}
