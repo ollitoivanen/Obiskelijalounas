@@ -1,4 +1,4 @@
-### Opiskelijalounas Åbo
+# Opiskelijalounas Åbo
 
 ## What this is
 
