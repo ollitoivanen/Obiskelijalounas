@@ -1,5 +1,6 @@
 # Opiskelijalounas Åbo
 
+**Use it on [https://ollitoivanen.github.io/Obiskelijalounas/](https://ollitoivanen.github.io/Obiskelijalounas/)**
 ## What this is
 
 This is a website built with gatsby/react, displaying the menus of student restaurants in Turku, Finland. It was built to make it easier to quickly check the menus of three main lunch providers in the city: Unica, Kårkafeerna and Sodexo.
